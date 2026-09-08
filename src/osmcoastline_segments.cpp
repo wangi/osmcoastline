@@ -49,6 +49,8 @@
 # include <io.h>
 #endif
 
+namespace {
+
 using segvec = std::vector<osmium::UndirectedSegment>;
 
 class InputFile {
@@ -79,8 +81,6 @@ public:
     }
 
 }; // class InputFile
-
-namespace {
 
 void print_help() {
 }

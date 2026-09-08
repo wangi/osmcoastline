@@ -48,6 +48,8 @@
 #include <string>
 #include <utility>
 
+namespace {
+
 using index_type = osmium::index::map::SparseMemArray<osmium::unsigned_object_id_type, osmium::Location>;
 using location_handler_type = osmium::handler::NodeLocationsForWays<index_type, index_type>;
 
@@ -105,6 +107,8 @@ public:
     }
 
 }; // class CoastlineWaysHandler
+
+} // anonymous namespace
 
 int main(int argc, char* argv[]) {
     if (argc >= 2) {
