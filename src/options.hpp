@@ -22,9 +22,10 @@
 
 */
 
+#include <cstdint>
 #include <string>
 
-enum class output_polygon_type {
+enum class output_polygon_type : std::uint8_t {
     none  = 0,
     land  = 1,
     water = 2,

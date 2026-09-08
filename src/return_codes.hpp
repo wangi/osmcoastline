@@ -22,7 +22,7 @@
 
 */
 
-enum return_codes { // NOLINT(cppcoreguidelines-use-enum-class) want autodecay to int
+enum return_codes : int { // NOLINT(cppcoreguidelines-use-enum-class) want autodecay to int
     return_code_ok      = 0,
     return_code_warning = 1,
     return_code_error   = 2,

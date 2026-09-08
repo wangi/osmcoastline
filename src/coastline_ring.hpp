@@ -64,7 +64,7 @@ using locmap_type = std::multimap<osmium::object_id_type, osmium::Location*>;
  */
 class CoastlineRing {
 
-    std::vector<osmium::NodeRef> m_way_node_list{};
+    std::vector<osmium::NodeRef> m_way_node_list;
 
     /**
      * Smallest ID of all the ways making up the ring. Can be used as somewhat

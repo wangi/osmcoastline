@@ -35,7 +35,7 @@
 
 void CoastlineRing::setup_locations(locmap_type& locmap) {
     for (auto& wn : m_way_node_list) {
-        locmap.insert(std::make_pair(wn.ref(), &(wn.location())));
+        locmap.insert(std::make_pair(wn.ref(), &wn.location()));
     }
 }
 
