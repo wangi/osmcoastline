@@ -27,13 +27,13 @@
 
 template <typename R, typename T>
 std::unique_ptr<R> make_unique_ptr_clone(const T* source) {
-    static_assert(std::is_convertible<T*, R*>::value, "T* must be convertible to R*");
+    static_assert(std::is_convertible_v<T*, R*>, "T* must be convertible to R*");
     return std::unique_ptr<R>{static_cast<R*>(source->clone())};
 }
 
 template <typename TDerived, typename TBase>
 std::unique_ptr<TDerived> static_cast_unique_ptr(std::unique_ptr<TBase>&& ptr) {
-    static_assert(std::is_base_of<TBase, TDerived>::value, "TDerived must be derived from TBase");
+    static_assert(std::is_base_of_v<TBase, TDerived>, "TDerived must be derived from TBase");
     return std::unique_ptr<TDerived>{static_cast<TDerived*>(ptr.release())};
 }
 
