@@ -20,15 +20,22 @@ Checks:
   - '-hicpp-avoid-c-arrays'  # Makes sense for some array, but especially for char arrays using std::array isn't a good solution.
   - '-hicpp-no-array-decay'
   - '-hicpp-vararg'  # Too strict, sometimes calling vararg functions is necessary.
+  - '-llvm-header-guard'  # Not applicable.
   - '-llvm-prefer-static-over-anonymous-namespace'  # Matter of taste and we are not following this one.
+  - '-llvm-use-ranges'  # Not applicable.
   - '-llvmlibc-*'  # Not applicable.
   - '-misc-include-cleaner'  # Too many reports. Disabled for now.
   - '-misc-no-recursion'  # Nothing wrong about recursion.
   - '-modernize-avoid-c-arrays'  # Makes sense for some array, but especially for char arrays using std::array isn't a good solution.
+  - '-modernize-use-nodiscard'  # Too many and not all that important.
   - '-modernize-use-trailing-return-type'  # I am not quite that modern.
   - '-readability-identifier-length'  # Sometimes short variable names are okay.
   - '-readability-implicit-bool-conversion'  # I don't think this makes the code more readable.
   - '-readability-magic-numbers'  # Generally good advice, but there are too many places where this is useful, for instance in tests.
+  - '-readability-trailing-comma'  # Not our style.
   - '-readability-use-anyofallof'  # Not necessarily more readable.
 # WarningsAsErrors: '*'
+CheckOptions:
+  - key: misc-non-private-member-variables-in-classes.IgnoreClassesWithAllMemberVariablesBeingPublic
+    value: true
 ...
