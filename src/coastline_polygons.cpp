@@ -63,7 +63,7 @@ std::unique_ptr<OGRPolygon> create_rectangular_polygon(double x1, double y1, dou
     return polygon;
 }
 
-bool add_segment_to_line(OGRLineString* line, OGRPoint* point1, OGRPoint* point2) {
+bool add_segment_to_line(OGRLineString* line, OGRPoint const* point1, OGRPoint const* point2) {
     // segments along southern edge of the map are not added to line output
     if (point1->getY() < srs.min_y() && point2->getY() < srs.min_y()) {
         if (debug) {
