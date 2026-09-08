@@ -25,8 +25,8 @@
 #include "coastline_ring.hpp"
 
 #include <osmium/geom/ogr.hpp>
-#include <osmium/osm/way.hpp>
 #include <osmium/osm/types.hpp>
+#include <osmium/osm/way.hpp>
 
 #include <cstddef>
 #include <list>
